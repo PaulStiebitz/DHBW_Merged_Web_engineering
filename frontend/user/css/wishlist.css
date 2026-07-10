@@ -1,0 +1,249 @@
+
+/* WISHLISTS */
+.wishlist-card {
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wishlist-id {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.wishlist-title,
+.wishlist-badge {
+  margin-left: 0.4rem;
+}
+
+.wishlist-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.wishlist-owner {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.2rem;
+}
+
+.wishlist-owner-name,
+.wishlist-description {
+  color: #64748b;
+}
+
+.wishlist-description {
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+}
+
+.wishlist-products {
+  margin-top: 0.5rem;
+}
+
+.wishlist-products-empty {
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.wishlist-product-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #f1f5f9;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.82rem;
+  margin: 0.2rem;
+}
+
+.wishlist-product-remove,
+.wishlist-selected-clear {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 0.9rem;
+}
+
+.wishlist-add-product {
+  display: none;
+  margin-top: 0.75rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.75rem;
+}
+
+.wishlist-add-product-search {
+  position: relative;
+}
+
+.wishlist-add-product-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.wishlist-add-product-autocomplete {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 400;
+}
+
+.wishlist-selected-product {
+  display: none;
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.6rem;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 4px;
+  font-size: 0.82rem;
+}
+
+.wishlist-selected-product-content,
+.wishlist-add-product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wishlist-add-product-actions {
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+}
+
+/* Toolbar: Titel + Aktionsbuttons nebeneinander */
+.wishlist-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.wishlist-toolbar h1 {
+  margin: 0;
+}
+
+.wishlist-toolbar-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Neue-Liste-Formular: standardmäßig versteckt */
+.wishlist-new-form {
+  display: none;
+  margin-bottom: 1.5rem;
+}
+
+.wishlist-form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Modal-Overlay (Perm + Delete) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card {
+  width: 95%;
+}
+
+.modal-card h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-alert {
+  margin-bottom: 0.5rem;
+}
+
+/* Perm-Modal: User-Suche */
+.perm-search-wrap {
+  position: relative;
+}
+
+.perm-search-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.perm-autocomplete {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 300;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+/* Gewählter User - blaues Chip */
+.perm-selected-user {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perm-clear-btn {
+  border: none;
+  background: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Delete-Modal: Eingabefeld */
+.modal-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestellhistorie - PC Parts Shop</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">PC Parts Shop</span>
+    <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">Produkte</a>
+      <a href="/cart.html">Warenkorb</a>
+      <a href="/orders.html">Bestellungen</a>
+      <a href="/wishlist.html">Wunschlisten</a>
+      <button class="btn-logout" id="btn-logout">Abmelden</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Meine Bestellungen</h1>
+    <div id="alert-box"></div>
+    <div id="orders-list"></div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/orders.js"></script>
+</body>
+</html>

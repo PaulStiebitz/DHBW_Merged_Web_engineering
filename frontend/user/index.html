@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produkte - PC Parts Shop</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">PC Parts Shop</span>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">Produkte</a>
+      <a href="/cart.html">Warenkorb</a>
+      <a href="/orders.html">Bestellungen</a>
+      <a href="/wishlist.html">Wunschlisten</a>
+      <span id="nav-user" style="color:#94a3b8;font-size:0.85rem;"></span>
+      <button class="btn-logout" id="btn-logout">Abmelden</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Computerkomponenten</h1>
+
+    <div id="alert-box"></div>
+
+    <div class="search-bar">
+      <input type="number" id="search-id" placeholder="Produkt-ID..." style="max-width:130px;" min="1">
+      <input type="text" id="search-name" placeholder="Name suchen...">
+      <select id="search-category">
+        <option value="">Alle Kategorien</option>
+        <option>CPU</option>
+        <option>GPU</option>
+        <option>RAM</option>
+        <option>SSD</option>
+        <option>Mainboard</option>
+        <option>Netzteil</option>
+        <option>Gehäuse</option>
+        <option>Kühlung</option>
+      </select>
+      <button class="btn btn-primary" id="btn-search">Suchen</button>
+    </div>
+
+    <div class="grid" id="products-grid">
+      <p style="color:#94a3b8;">Lädt...</p>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Produkte</title>
+  <link rel="stylesheet" href="/admin/css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">Admin Panel</span>
+    <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <span class="admin-badge">ADMIN</span>
+      <a href="/admin/">Produkte</a>
+      <a href="/admin/users.html">User-Verwaltung</a>
+      <span id="nav-name" style="color:#94a3b8;font-size:0.85rem;"></span>
+      <button class="btn-logout" id="btn-logout">Abmelden</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="toolbar">
+      <h1 style="margin:0;">Produktverwaltung</h1>
+      <a href="/admin/product-form.html" class="btn btn-primary">+ Neues Produkt</a>
+    </div>
+
+    <div id="alert-box"></div>
+
+    <div class="search-bar">
+      <input type="number" id="search-id" placeholder="Produkt-ID..." style="max-width:130px;" min="1">
+      <input type="text" id="search-name" placeholder="Name suchen...">
+      <select id="search-category">
+        <option value="">Alle Kategorien</option>
+        <option>CPU</option>
+        <option>GPU</option>
+        <option>RAM</option>
+        <option>SSD</option>
+        <option>Mainboard</option>
+        <option>Netzteil</option>
+        <option>Gehäuse</option>
+        <option>Kühlung</option>
+      </select>
+      <button class="btn btn-primary" id="btn-search">Suchen</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Kategorie</th>
+            <th>Preis</th>
+            <th>Bestand</th>
+            <th>Aktionen</th>
+          </tr>
+        </thead>
+        <tbody id="products-body">
+          <tr><td colspan="6" style="color:#94a3b8;">Lädt...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/admin/js/api.js"></script>
+  <script src="/admin/js/products.js"></script>
+</body>
+</html>

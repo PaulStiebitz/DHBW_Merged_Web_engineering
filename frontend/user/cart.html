@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warenkorb - PC Parts Shop</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="brand">PC Parts Shop</span>
+    <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">Produkte</a>
+      <a href="/cart.html">Warenkorb</a>
+      <a href="/orders.html">Bestellungen</a>
+      <a href="/wishlist.html">Wunschlisten</a>
+      <button class="btn-logout" id="btn-logout">Abmelden</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Warenkorb</h1>
+
+    <div id="alert-box"></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Produkt</th>
+            <th>Preis</th>
+            <th>Menge</th>
+            <th>Gesamt</th>
+            <th>Aktion</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+          <tr><td colspan="5" style="color:#94a3b8;">Lädt...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="cart-total" style="text-align:right;margin-top:1rem;font-size:1.1rem;font-weight:700;"></div>
+    <div style="text-align:right;margin-top:0.75rem;">
+      <button class="btn btn-success" id="btn-checkout" style="display:none;">Jetzt kaufen</button>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
