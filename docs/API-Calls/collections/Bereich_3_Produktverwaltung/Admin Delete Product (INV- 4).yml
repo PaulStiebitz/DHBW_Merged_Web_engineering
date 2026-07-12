@@ -1,0 +1,20 @@
+info:
+  name: Admin Delete Product (INV- 4)
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://localhost:3000/api/inventory/products/1
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWJzaG9wLmRoYndAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwibmFtZSI6IlNob3AgQWRtaW4iLCJpYXQiOjE3ODM4NjA1OTgsImV4cCI6MTc4NDQ2NTM5OH0.lhaMrGK7abtqQbiLKX-ktwh9tJZ0P7wYJPi2VNflkvU
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
