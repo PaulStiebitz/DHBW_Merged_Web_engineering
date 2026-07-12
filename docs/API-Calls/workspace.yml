@@ -16,14 +16,6 @@ collections:
     path: "collections/Bereich_5_Wunschlisten"
   - name: "Bereich_6_Berechtigungen"
     path: "collections/Bereich_6_Berechtigungen"
-  - name: "Bereich1_Infrastruktur"
-    path: "collections/Bereich1_Infrastruktur"
-  - name: "Bereich_2"
-    path: "collections/Bereich_2"
-  - name: "collections"
-    path: "collections/collections"
-  - name: "Bereich3_"
-    path: "collections/Bereich3_"
 
 specs:
 
