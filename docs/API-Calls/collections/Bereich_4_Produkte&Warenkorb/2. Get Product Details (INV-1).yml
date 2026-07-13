@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: http://localhost:3000/api/inventory/products/1
-  auth: inherit
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJwYXVsc2l4dDEzQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwibmFtZSI6IlBhdWwiLCJpYXQiOjE3ODM5NjAxOTMsImV4cCI6MTc4NDU2NDk5M30.Lxg4Jz0GzoDMccOXGIAKC6y0Js-_WXnILeC3XH20vlQ
 
 settings:
   encodeUrl: true
