@@ -44,7 +44,7 @@ router.get('/', auth, async (req, res) => {
        JOIN users u ON u.id = w.owner_id
        LEFT JOIN wishlist_permissions wp ON wp.wishlist_id = w.id AND wp.user_id = $1
        WHERE w.owner_id = $1 OR wp.user_id = $1
-       ORDER BY w.created_at DESC`,
+       ORDER BY w.id DESC`,
       [req.user.id]
     );
 
