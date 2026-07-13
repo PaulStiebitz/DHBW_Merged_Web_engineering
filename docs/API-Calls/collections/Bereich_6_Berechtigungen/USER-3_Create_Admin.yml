@@ -1,0 +1,23 @@
+info:
+  name: USER-3 Admin erstellen
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:3000/api/users/admin
+  body:
+    type: json
+    data: |-
+      {
+        "name": "admin3", 
+        "email": "test5@mail.com",
+        "password": "123456"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
