@@ -1,0 +1,22 @@
+info:
+  name: 3. Add to Cart (INV-6)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:3000/api/inventory/cart
+  body:
+    type: json
+    data: |-
+      {
+        "product_id": 1,
+        "quantity": 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
