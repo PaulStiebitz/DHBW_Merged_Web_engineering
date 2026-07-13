@@ -33,7 +33,7 @@ router.get('/search', auth, async (req, res) => {
 router.get('/:id', auth, requireAdmin, async (req, res) => {
   try {
     const { rows: [user] } = await db.query(
-      'SELECT id, name, email, role, is_verified, is_locked, created_at FROM users WHERE id = $1',
+      'SELECT id, name, email, role, is_verified, is_locked FROM users WHERE id = $1',
       [req.params.id]
     );
     if (!user) return res.status(404).json({ error: 'User nicht gefunden' });
@@ -99,7 +99,7 @@ router.patch('/:id/status', auth, requireAdmin, async (req, res) => {
 router.get('/', auth, requireAdmin, async (req, res) => {
   try {
     const { rows } = await db.query(
-      'SELECT id, name, email, role, is_verified, is_locked, created_at FROM users ORDER BY created_at DESC'
+      'SELECT id, name, email, role, is_verified, is_locked FROM users ORDER BY id DESC'
     );
     res.json(rows);
   } catch (err) {

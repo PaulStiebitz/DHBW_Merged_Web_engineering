@@ -2,6 +2,22 @@ opencollection: 1.0.0
 
 info:
   name: Bereich_6_Berechtigungen
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWJzaG9wLmRoYndAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwibmFtZSI6IlNob3AgQWRtaW4iLCJpYXQiOjE3ODMzMjY1NDgsImV4cCI6MTc4MzkzMTM0OH0.zJe8FJE_hO_nRb61IFjicp7CAwdLC73KCPG0f_rmugk
 bundled: false
 extensions:
   bruno:
