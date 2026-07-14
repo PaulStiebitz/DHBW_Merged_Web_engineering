@@ -188,7 +188,8 @@ router.get('/magic-login', async (req, res) => {
 
     const jwt = tokenService.signJWT({ id: user.id, email: user.email, role: user.role, name: user.name });
     // Token als Query-Parameter weitergeben, Frontend speichert es
-    res.redirect(`/login.html?magic_token=${jwt}&role=${user.role}`);
+    const target = user.role === 'admin' ? '/admin/login.html' : '/login.html';
+    res.redirect(`${target}?magic_token=${jwt}&role=${user.role}`);
   } catch (err) {
     console.error(err);
     res.redirect('/login.html?error=server_error');

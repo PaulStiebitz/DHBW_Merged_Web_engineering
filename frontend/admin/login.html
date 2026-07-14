@@ -11,18 +11,47 @@
   <div class="login-wrap">
     <h1>Admin - PC Parts Shop</h1>
     <div class="form-card">
+      <div class="tabs">
+        <div class="tab active" data-tab="login">Anmelden</div>
+        <div class="tab" data-tab="magic">Magic Link</div>
+      </div>
+
       <div id="alert-box"></div>
-      <form id="form-login">
-        <div class="form-group">
-          <label>E-Mail</label>
-          <input type="email" id="email" required>
-        </div>
-        <div class="form-group">
-          <label>Passwort</label>
-          <input type="password" id="password" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">Anmelden</button>
-      </form>
+
+      <!-- LOGIN -->
+      <div class="panel active" id="panel-login">
+        <form id="form-login">
+          <div class="form-group">
+            <label>E-Mail</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label>Passwort</label>
+            <input type="password" id="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Anmelden</button>
+        </form>
+      </div>
+
+      <!-- MAGIC LINK -->
+      <div class="panel" id="panel-magic">
+        <p class="magic-hint">Erhalte einen Anmeldelink per E-Mail - kein Passwort nötig.</p>
+        <form id="form-magic">
+          <div class="form-group">
+            <label>E-Mail</label>
+            <input type="email" id="magic-email" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Link senden</button>
+        </form>
+        <div class="divider">oder Code eingeben</div>
+        <form id="form-magic-code">
+          <div class="form-group">
+            <label>Code</label>
+            <input type="text" id="magic-code" placeholder="Token aus der E-Mail">
+          </div>
+          <button type="submit" class="btn btn-secondary btn-full">Anmelden</button>
+        </form>
+      </div>
     </div>
   </div>
 
