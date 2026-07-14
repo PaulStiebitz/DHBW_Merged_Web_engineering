@@ -1,0 +1,67 @@
+<mxfile host="Electron">
+  <diagram id="system-overview" name="Systemübersicht">
+    <mxGraphModel dx="2524" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="browser" parent="1" style="shape=mxgraph.general.browser;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="Browser&#xa;(User / Admin)" vertex="1">
+          <mxGeometry height="100" width="160" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="docker" parent="1" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;fontSize=14;" value="Docker Compose" vertex="1">
+          <mxGeometry height="560" width="660" x="320" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="backend_container" parent="docker" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="backend-Container  :3000" vertex="1">
+          <mxGeometry height="440" width="500" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="backend_container" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" value="Express.js&#xa;API-Server" vertex="1">
+          <mxGeometry height="60" width="160" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="static_user" parent="backend_container" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Static Files&#xa;/frontend/user" vertex="1">
+          <mxGeometry height="60" width="180" x="75" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="static_admin" parent="backend_container" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Static Files&#xa;/frontend/admin" vertex="1">
+          <mxGeometry height="60" width="190" x="70" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="backend_container" style="shape=cylinder3;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;" value="PostgreSQL 16&#xa;webshop-DB  :5432" vertex="1">
+          <mxGeometry height="100" width="160" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="backend_container" source="api" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="db" value="SQL (pg)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="70" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="smtp" parent="1" style="shape=mxgraph.general.cloud;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;" value="SMTP-Server&#xa;smtp.gmail.com" vertex="1">
+          <mxGeometry height="100" width="180" x="1030" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="browser" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="api" value="HTTP :3000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="browser" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="static_user" value="HTTP :3000">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="425" />
+              <mxPoint x="390" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="browser" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="static_admin" value="HTTP :3000">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="400" />
+              <mxPoint x="380" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="smtp" value="SMTP :587">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pgdata" parent="1" style="shape=mxgraph.cisco.storage.generic_disk;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="pgdata&#xa;(Volume)" vertex="1">
+          <mxGeometry height="80" width="120" x="1049" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="db" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;dashed=1;" target="pgdata" value="mount">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

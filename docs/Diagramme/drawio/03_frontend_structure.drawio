@@ -1,0 +1,91 @@
+<mxfile host="Electron">
+  <diagram id="frontend-structure" name="Frontend Page Structure">
+    <mxGraphModel dx="2524" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user_group" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" value="frontend/user  (/)" vertex="1">
+          <mxGeometry height="560" width="420" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u_login" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="login.html&#xa;Password &amp; Magic-Link Login" vertex="1">
+          <mxGeometry height="60" width="200" x="110" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="u_index" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="index.html&#xa;Product Overview" vertex="1">
+          <mxGeometry height="60" width="200" x="110" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="u_product" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="product.html&#xa;Product Detail" vertex="1">
+          <mxGeometry height="60" width="180" x="30" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="u_cart" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="cart.html&#xa;Shopping Cart" vertex="1">
+          <mxGeometry height="60" width="180" x="30" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="u_orders" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="orders.html&#xa;Order History" vertex="1">
+          <mxGeometry height="60" width="180" x="30" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="u_wishlist" parent="user_group" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="wishlist.html&#xa;Wishlists" vertex="1">
+          <mxGeometry height="60" width="180" x="220" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="eu1" edge="1" parent="user_group" source="u_login" style="edgeStyle=orthogonalEdgeStyle;" target="u_index" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu2" edge="1" parent="user_group" source="u_index" style="edgeStyle=orthogonalEdgeStyle;" target="u_product" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu3" edge="1" parent="user_group" source="u_product" style="edgeStyle=orthogonalEdgeStyle;" target="u_cart" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu4" edge="1" parent="user_group" source="u_cart" style="edgeStyle=orthogonalEdgeStyle;" target="u_orders" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eu5" edge="1" parent="user_group" source="u_index" style="edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="u_wishlist" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_group" parent="1" style="swimlane;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;" value="frontend/admin  (/admin)" vertex="1">
+          <mxGeometry height="400" width="340" x="520" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_login" parent="admin_group" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="login.html&#xa;Admin Login" vertex="1">
+          <mxGeometry height="60" width="170" x="85" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a_index" parent="admin_group" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="index.html&#xa;Product Dashboard" vertex="1">
+          <mxGeometry height="60" width="170" x="85" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="a_product" parent="admin_group" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="product-form.html&#xa;Create / Edit Product" vertex="1">
+          <mxGeometry height="65" width="145" x="10" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="a_users" parent="admin_group" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="users.html&#xa;User Management" vertex="1">
+          <mxGeometry height="65" width="145" x="185" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1" edge="1" parent="admin_group" source="a_login" style="edgeStyle=orthogonalEdgeStyle;" target="a_index" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2" edge="1" parent="admin_group" source="a_index" style="edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="a_product" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3" edge="1" parent="admin_group" source="a_index" style="edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="a_users" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u_api" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="user/js/api.js" vertex="1">
+          <mxGeometry height="55" width="160" x="170" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="a_api" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="admin/js/api.js" vertex="1">
+          <mxGeometry height="55" width="160" x="610" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" parent="1" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;" value="Express API  :3000" vertex="1">
+          <mxGeometry height="55" width="200" x="870" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="ef1" edge="1" parent="1" source="u_api" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="backend" value="fetch /api/*  Bearer JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef2" edge="1" parent="1" source="a_api" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="backend" value="fetch /api/*  Bearer JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef3" edge="1" parent="1" source="user_group" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;dashed=1;" target="u_api" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef4" edge="1" parent="1" source="admin_group" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;dashed=1;" target="a_api" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
