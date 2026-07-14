@@ -1,0 +1,25 @@
+info:
+  name: magic_login_post
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:3000/api/auth/magic-login?token=791d7157ec81be15059adcc03c01e8458d821cc6d17684aacbd9a66332377f41
+  params:
+    - name: token
+      value: 791d7157ec81be15059adcc03c01e8458d821cc6d17684aacbd9a66332377f41
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "token": ""
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

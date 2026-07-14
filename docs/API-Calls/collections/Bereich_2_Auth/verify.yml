@@ -1,0 +1,24 @@
+info:
+  name: verify
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://localhost:3000/api/auth/verify?token=6e3deec1456cb15bc6056a879cb4bf7bc01fbc19cb4ee517ecd7ac53eb04b5e8
+  params:
+    - name: token
+      value: 6e3deec1456cb15bc6056a879cb4bf7bc01fbc19cb4ee517ecd7ac53eb04b5e8
+      type: query
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
