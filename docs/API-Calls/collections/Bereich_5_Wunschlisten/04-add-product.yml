@@ -1,0 +1,23 @@
+info:
+  name: 4. Produkt hinzufügen
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost:3000/api/wishlists/14/products
+  body:
+    type: json
+    data: |-
+      {
+        "product_id": 1
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWJzaG9wLmRoYndAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwibmFtZSI6IlNob3AgQWRtaW4iLCJpYXQiOjE3ODMyNTM4OTQsImV4cCI6MTc4Mzg1ODY5NH0.cfVi4aw5Ti-8vWETPmx4O84XWRmtTi660GnXa2FhgyI
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

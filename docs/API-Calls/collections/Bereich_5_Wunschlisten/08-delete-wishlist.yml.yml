@@ -1,0 +1,15 @@
+info:
+  name: 8. Wunschliste löschen
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: http://localhost:3000/api/wishlists/1
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

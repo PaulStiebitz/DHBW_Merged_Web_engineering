@@ -1,0 +1,24 @@
+info:
+  name: 6. Berechtigung vergeben
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:3000/api/wishlists/1/permissions
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 1,
+        "permission": "write"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWJzaG9wLmRoYndAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwibmFtZSI6IlNob3AgQWRtaW4iLCJpYXQiOjE3ODMyNTM4OTQsImV4cCI6MTc4Mzg1ODY5NH0.cfVi4aw5Ti-8vWETPmx4O84XWRmtTi660GnXa2FhgyI
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
