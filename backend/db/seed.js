@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const db     = require('../config/db');
+const db = require('../config/db');
 
 async function seed() {
   try {

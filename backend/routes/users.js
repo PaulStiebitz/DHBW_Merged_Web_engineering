@@ -1,7 +1,7 @@
-const express      = require('express');
-const bcrypt       = require('bcrypt');
-const db           = require('../config/db');
-const auth         = require('../middleware/auth');
+const express = require('express');
+const bcrypt = require('bcrypt');
+const db = require('../config/db');
+const auth = require('../middleware/auth');
 const requireAdmin = require('../middleware/requireAdmin');
 
 const router = express.Router();

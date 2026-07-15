@@ -1,9 +1,9 @@
-const express      = require('express');
-const bcrypt       = require('bcrypt');
-const db           = require('../config/db');
+const express = require('express');
+const bcrypt = require('bcrypt');
+const db = require('../config/db');
 const tokenService = require('../services/tokenService');
 const emailService = require('../services/emailService');
-const auth         = require('../middleware/auth');
+const auth = require('../middleware/auth');
 const requireAdmin = require('../middleware/requireAdmin');
 
 
